@@ -10,8 +10,8 @@ install_php_from_brew() {
     brew install $formula
     echo ">> Linking with keg ${keg}"
     stat "${keg}"
-    ln -s "${keg}/bin" bin
-    ln -s "${keg}/sbin" sbin
+    ln -s "${keg}/bin" "${ASDF_INSTALL_PATH}/bin"
+    ln -s "${keg}/sbin" "${ASDF_INSTALL_PATH}/sbin"
     echo ">> Done"
 }
 
