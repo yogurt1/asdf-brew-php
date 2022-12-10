@@ -6,10 +6,13 @@ install_php_from_brew() {
     local formula="shivammathur/php/php@${ASDF_INSTALL_VERSION}"
     local keg=$(brew --prefix $formula)
     brew tap shivammathur/php
+    echo ">> Installing formula ${formula}"
     brew install $formula
+    echo ">> Linking with keg ${keg}"
     stat "${keg}"
     ln -s "${keg}/bin" bin
     ln -s "${keg}/sbin" sbin
+    echo ">> Done"
 }
 
 install_php_from_brew

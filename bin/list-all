@@ -2,4 +2,5 @@
 
 set -euo pipefail
 
+brew tap shivammathur/php
 brew info --json shivammathur/php/php | jq -r '.[].versioned_formulae[]' | cut -f2 -d'@' | sort -h
