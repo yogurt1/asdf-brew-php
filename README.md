@@ -3,7 +3,7 @@
 # asdf-brew-php [![Build](https://github.com/yogurt1/asdf-brew-php/actions/workflows/build.yml/badge.svg)](https://github.com/yogurt1/asdf-brew-php/actions/workflows/build.yml) [![Lint](https://github.com/yogurt1/asdf-brew-php/actions/workflows/lint.yml/badge.svg)](https://github.com/yogurt1/asdf-brew-php/actions/workflows/lint.yml)
 
 
-[brew-php](asdf-brew-php) plugin for the [asdf version manager](https://asdf-vm.com).
+[php](asdf-brew-php) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -16,34 +16,32 @@
 
 # Dependencies
 
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
+- `brew` homebrew app
+- `jq` for queries PHP versions from homebrew
 
 # Install
 
 Plugin:
 
 ```shell
-asdf plugin add brew-php
+asdf plugin add php
 # or
-asdf plugin add brew-php https://github.com/yogurt1/asdf-brew-php.git
+asdf plugin add php https://github.com/yogurt1/asdf-brew-php.git
 ```
 
 brew-php:
 
 ```shell
 # Show all installable versions
-asdf list-all brew-php
+asdf list-all php
 
 # Install specific version
-asdf install brew-php latest
+asdf install php latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global brew-php latest
+asdf global php latest
 
-# Now brew-php commands are available
+# Now php commands are available
 php --version
 ```
 

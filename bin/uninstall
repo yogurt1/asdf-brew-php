@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+brew remove "shivammathur/php/php@${ASDF_INSTALL_VERSION}"
