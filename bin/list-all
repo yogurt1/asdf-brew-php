@@ -10,11 +10,11 @@ sort_versions() {
 }
 
 versions=$(
-  brew info --json shivammathur/php/php
-    | jq -r '.[].versioned_formulae[]'
-    | cut -f2 -d'@'
-    | sort_versions
-    | xargs
+  brew info --json shivammathur/php/php |
+    jq -r '.[].versioned_formulae[]' |
+    cut -f2 -d'@' |
+    sort_versions |
+    xargs
 )
 
 echo "$versions"
